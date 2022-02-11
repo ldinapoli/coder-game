@@ -65,6 +65,6 @@ public class Player : MonoBehaviour
 
     void Jump()
     {
-        GetComponent<Rigidbody>().AddForce(Vector3.up * 100);
+        GetComponent<Rigidbody>().AddForce(Vector3.up * 200);
     }
 }
