@@ -41,6 +41,10 @@ public class Player : MonoBehaviour
         {
             MoveToDirectionWithSpeed(new Vector3(1, 0, 0), this.movementSpeed);
         }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Jump();
+        }
     }
 
     void MoveToDirectionWithSpeed(Vector3 direction, int movementSpeed)
@@ -57,5 +61,10 @@ public class Player : MonoBehaviour
     {
         this.health = this.health + healAmount;
 
+    }
+
+    void Jump()
+    {
+        GetComponent<Rigidbody>().AddForce(Vector3.up * 100);
     }
 }
