@@ -25,6 +25,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float x = Input.GetAxis("Horizontal");
+
         if (Input.GetKey(KeyCode.W))
         {
             MoveToDirectionWithSpeed(new Vector3(0, 0, 1), this.movementSpeed);
