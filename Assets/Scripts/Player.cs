@@ -67,4 +67,15 @@ public class Player : MonoBehaviour
     {
         GetComponent<Rigidbody>().AddForce(Vector3.up * 200);
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.GetComponent<Cannon>())
+        {
+            if (Input.GetMouseButton(0))
+            {
+                other.GetComponent<Cannon>().Fire();
+            }            
+        }
+    }
 }
