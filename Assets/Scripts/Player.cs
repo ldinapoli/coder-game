@@ -41,10 +41,6 @@ public class Player : MonoBehaviour
         {
             MoveToDirectionWithSpeed(new Vector3(1, 0, 0), this.movementSpeed);
         }
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Jump();
-        }
     }
 
     void MoveToDirectionWithSpeed(Vector3 direction, int movementSpeed)
@@ -63,20 +59,26 @@ public class Player : MonoBehaviour
 
     }
 
-    void Jump()
-    {
-        GetComponent<Rigidbody>().AddForce(Vector3.up * 200);
-    }
-
     private void OnTriggerStay(Collider other)
     {
         if (other.GetComponent<Cannon>())
         {
-            if (Input.GetKey(KeyCode.J)
-                || Input.GetKey(KeyCode.K)
-                || Input.GetKey(KeyCode.L))
+            Cannon cannon = other.GetComponent<Cannon>();
+            if (Input.GetKey(KeyCode.J))
             {
-                other.GetComponent<Cannon>().Fire();
+                cannon.Fire();
+            }
+            if (Input.GetKey(KeyCode.K))
+            {
+                cannon.Fire();
+            }
+            if (Input.GetKey(KeyCode.L))
+            {
+                cannon.Fire();
+            }
+            if (Input.GetKey(KeyCode.Space))
+            {
+                cannon.Fire();
             }
         }
     }
