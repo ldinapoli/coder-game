@@ -72,10 +72,12 @@ public class Player : MonoBehaviour
     {
         if (other.GetComponent<Cannon>())
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetKey(KeyCode.J)
+                || Input.GetKey(KeyCode.K)
+                || Input.GetKey(KeyCode.L))
             {
                 other.GetComponent<Cannon>().Fire();
-            }            
+            }
         }
     }
 }

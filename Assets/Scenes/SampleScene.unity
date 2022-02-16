@@ -444,21 +444,29 @@ PrefabInstance:
       propertyPath: bulletProjectile
       value: 
       objectReference: {fileID: 2437051045749344620, guid: d78eb95c0d9012f4ba3f47506d391084, type: 3}
+    - target: {fileID: 1644466548787439634, guid: 5586b37c093ca604da86ae437838a9e2, type: 3}
+      propertyPath: initialVelocity.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644466548787439634, guid: 5586b37c093ca604da86ae437838a9e2, type: 3}
+      propertyPath: initialVelocity.z
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 2828419129317181818, guid: 5586b37c093ca604da86ae437838a9e2, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2828419129317181818, guid: 5586b37c093ca604da86ae437838a9e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.97
+      value: 6.71
       objectReference: {fileID: 0}
     - target: {fileID: 2828419129317181818, guid: 5586b37c093ca604da86ae437838a9e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.49
+      value: -10.12
       objectReference: {fileID: 0}
     - target: {fileID: 2828419129317181818, guid: 5586b37c093ca604da86ae437838a9e2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.190794
+      value: -11.41
       objectReference: {fileID: 0}
     - target: {fileID: 2828419129317181818, guid: 5586b37c093ca604da86ae437838a9e2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -500,7 +508,8 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5586b37c093ca604da86ae437838a9e2, type: 3}
 --- !u!1001 &3663730757827929418
 PrefabInstance:
