@@ -125,6 +125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bcb5ebf3aff3364e97ad1d55950c314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  direction: {x: 0, y: 3, z: 5}
   damage: 10
+  destroyTime: 5
+  scaleToTransform: {x: 2, y: 2, z: 2}

@@ -523,8 +523,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootPosition: {fileID: 3795830422020326950}
-  bulletProjectile: {fileID: 2437051045749344614, guid: d78eb95c0d9012f4ba3f47506d391084, type: 3}
-  initialVelocity: {x: 0, y: 0, z: 0}
+  bulletProjectile: {fileID: 2437051045749344620, guid: d78eb95c0d9012f4ba3f47506d391084, type: 3}
+  initialVelocity: {x: 0, y: 15, z: 50}
+  autoShootingTime: 3
 --- !u!1 &7679325501005050067
 GameObject:
   m_ObjectHideFlags: 0

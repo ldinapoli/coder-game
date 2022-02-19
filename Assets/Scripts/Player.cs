@@ -76,10 +76,6 @@ public class Player : MonoBehaviour
             {
                 cannon.Fire();
             }
-            if (Input.GetKey(KeyCode.Space))
-            {
-                cannon.Fire();
-            }
         }
     }
 }
