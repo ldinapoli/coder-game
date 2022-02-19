@@ -3,49 +3,49 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField]
-    private Vector3 scale;
-
-    [SerializeField]
     private int movementSpeed;
-
     [SerializeField]
     private int health;
+    [SerializeField]
+    private float mouseSens;
+    [SerializeField]
+    private GameObject cam1;
+    [SerializeField]
+    private GameObject cam2;
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.localScale = scale;
         Debug.Log("start health: " + health);
         DamagePlayer(10);
         Debug.Log("player damaged current health: " + health);
         HealPlayer(5);
         Debug.Log("player healed current health: " + health);
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        Move();
+        if (Input.GetKeyDown(KeyCode.N))
         {
-            MoveToDirectionWithSpeed(new Vector3(0, 0, 1), this.movementSpeed);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            MoveToDirectionWithSpeed(new Vector3(0, 0, -1), this.movementSpeed);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            MoveToDirectionWithSpeed(new Vector3(-1, 0, 0), this.movementSpeed);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            MoveToDirectionWithSpeed(new Vector3(1, 0, 0), this.movementSpeed);
+            cam1.SetActive(!cam1.activeSelf);
+            cam2.SetActive(!cam2.activeSelf);
         }
     }
 
     void MoveToDirectionWithSpeed(Vector3 direction, int movementSpeed)
     {
         transform.position += direction * movementSpeed * Time.deltaTime;
+    }
+
+    void Move()
+    {
+        float hor = Input.GetAxis("Horizontal");
+        float ver = Input.GetAxis("Vertical");
+        transform.Translate(new Vector3(hor, 0, ver) * movementSpeed * Time.deltaTime);
     }
 
     void DamagePlayer(int damageDealt)
